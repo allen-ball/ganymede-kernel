@@ -3,7 +3,7 @@ package ganymede.install;
  * ##########################################################################
  * Ganymede
  * %%
- * Copyright (C) 2021 - 2023 Allen D. Ball
+ * Copyright (C) 2021 - 2024 Allen D. Ball
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -229,7 +229,7 @@ public class Install implements ApplicationRunner {
 
             kernel.put("display_name", display_name);
 
-            var env = kernel.with("env");
+            var env = kernel.withObject("env");
 
             env.put("JUPYTER_CONFIG_DIR", config_dir);
             env.put("JUPYTER_CONFIG_PATH", config_path);

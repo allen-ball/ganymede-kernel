@@ -83,8 +83,8 @@ public interface Renderer {
      * @param   object          The {@link Object} to render.
      */
     public default void renderTo(ObjectNode bundle, Object object) {
-        if (! bundle.with(DATA).has(TEXT_PLAIN_VALUE)) {
-            bundle.with(DATA).put(TEXT_PLAIN_VALUE, String.valueOf(object));
+        if (! bundle.withObject(DATA_JSONP).has(TEXT_PLAIN_VALUE)) {
+            bundle.withObject(DATA_JSONP).put(TEXT_PLAIN_VALUE, String.valueOf(object));
         }
     }
 
