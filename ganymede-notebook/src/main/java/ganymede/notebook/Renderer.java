@@ -34,6 +34,9 @@ public interface Renderer {
     public static final String DATA = "data";
     public static final String METADATA = "metadata";
 
+    public static final String DATA_JSONP = "/" + DATA;
+    public static final String METADATA_JSONP = "/" + METADATA;
+
     /**
      * Singleton {@link RendererMap} instance.
      */
