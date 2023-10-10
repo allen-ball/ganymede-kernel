@@ -83,17 +83,17 @@ $ export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 $ ${JAVA_HOME}/bin/java \
       -jar ${HOME}/.m2/repository/ganymede/ganymede/2.2.0-SNAPSHOT/ganymede-2.2.0-SNAPSHOT.jar \
       -i --sys-prefix --copy-jar=false \
-      --id-suffix=spark-3.3.3 --display-name-suffix="with Spark 3.3.3" \
+      --id-suffix=spark-3.3.4 --display-name-suffix="with Spark 3.3.4" \
       --spark_home=/path/to/spark-home --hive_home=/path/to/hive-home
 $ jupyter kernelspec list
 Available kernels:
 ...
-  ganymede-2.2.0-java-11-spark-3.3.3             /.../share/jupyter/kernels/ganymede-2.2.0-java-11-spark-3.3.3
+  ganymede-2.2.0-java-11-spark-3.3.4             /.../share/jupyter/kernels/ganymede-2.2.0-java-11-spark-3.3.4
 ...
 ```
 
 would result in the configured
-`${jupyter.data}/kernels/ganymede-2.2.0-java-11-spark-3.3.3/kernel.json`
+`${jupyter.data}/kernels/ganymede-2.2.0-java-11-spark-3.3.4/kernel.json`
 kernelspec:
 
 ```json
@@ -111,7 +111,7 @@ kernelspec:
     "-f",
     "{connection_file}"
   ],
-  "display_name": "Ganymede 2.2.0 (Java 11) with Spark 3.3.3",
+  "display_name": "Ganymede 2.2.0 (Java 11) with Spark 3.3.4",
   "env": {
     "JUPYTER_CONFIG_DIR": "/Users/ball/.jupyter",
     "JUPYTER_CONFIG_PATH": "/Users/ball/.jupyter:/Users/ball/Notebooks/.venv/etc/jupyter:/usr/local/etc/jupyter:/etc/jupyter",

@@ -33,7 +33,7 @@
   <parent>
     <groupId>dev.hcf.ball</groupId>
     <artifactId>parent</artifactId>
-    <version>2023.1.7-SNAPSHOT</version>
+    <version>2024.0.0</version>
     <relativePath/>
   </parent>
   <organization>
@@ -121,17 +121,16 @@
     <jupyterlab-server.version>v2.24.0</jupyterlab-server.version>
     <jupyterlab-server.spec>https://github.com/jupyterlab/jupyterlab_server/raw/${jupyterlab-server.version}/jupyterlab_server/rest-api.yml</jupyterlab-server.spec>
 
-    <maven.version>3.9.4</maven.version>
+    <maven.version>3.9.7</maven.version>
+    <resolverVersion>1.9.20</resolverVersion>
 
-    <spark.version>3.3.3</spark.version>
+    <spark.version>3.3.4</spark.version>
     <scala.binary.version>2.12</scala.binary.version>
-    <scala.version>${scala.binary.version}.18</scala.version>
+    <scala.version>${scala.binary.version}.19</scala.version>
     <jackson.version>${jackson-bom.version}</jackson.version>
 
-    <openapi-generator-maven-plugin.version>6.6.0</openapi-generator-maven-plugin.version>
-
-    <commonmark.version>0.21.0</commonmark.version>
-    <jeromq.version>0.5.3</jeromq.version>
+    <commonmark.version>0.22.0</commonmark.version>
+    <jeromq.version>0.6.0</jeromq.version>
     <tablesaw.version>0.43.1</tablesaw.version>
   </properties>
   <modules>
@@ -173,12 +172,12 @@
       <dependency>
         <groupId>com.samskivert</groupId>
         <artifactId>jmustache</artifactId>
-        <version>1.15</version>
+        <version>1.16</version>
       </dependency>
       <dependency>
         <groupId>info.picocli</groupId>
         <artifactId>picocli</artifactId>
-        <version>4.7.5</version>
+        <version>4.7.6</version>
       </dependency>
       <dependency>
         <groupId>io.springfox</groupId>
@@ -304,7 +303,7 @@
       <dependency>
         <groupId>org.knowm.xchart</groupId>
         <artifactId>xchart</artifactId>
-        <version>3.8.5</version>
+        <version>3.8.8</version>
         <exclusions>
           <exclusion>
             <groupId>commons-logging</groupId>
