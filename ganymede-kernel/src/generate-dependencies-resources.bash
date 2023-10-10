@@ -3,15 +3,15 @@
 REPOSITORY="${HOME}/.m2/repository"
 TRANSITIVE=true
 
-MAVEN_DEPENDENCY_PLUGIN=dependency:3.5.0
+MAVEN_DEPENDENCY_PLUGIN=dependency:3.6.1
 
 set -u
 
-for artifact in ${*}; do
+for artifact in "$@"; do
     IFS=":"; read -ra GAV <<< "${artifact}"
     G="${GAV[0]}"
     A="${GAV[1]}"
-    V="${GAV[${#GAV[@]}-1]]}"
+    V="${GAV[-1]}"
 
     mvn -B "${MAVEN_DEPENDENCY_PLUGIN}:get" -Dtransitive="${TRANSITIVE}" -Dartifact="${G}:${A}:${V}"
 
