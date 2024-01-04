@@ -1,5 +1,5 @@
 /**
- * {@link.uri https://github.com/jupyterlab/jupyterlab_server/blob/v2.24.0/jupyterlab_server/rest-api.yml target=newtab https://github.com/jupyterlab/jupyterlab_server/blob/v2.24.0/jupyterlab_server/rest-api.yml}
+ * {@link.uri https://github.com/jupyterlab/jupyterlab_server/blob/v2.27.2/jupyterlab_server/rest-api.yml target=newtab https://github.com/jupyterlab/jupyterlab_server/blob/v2.27.2/jupyterlab_server/rest-api.yml}
  * model classes.
  *
  * @author {@link.uri mailto:ball@hcf.dev Allen D. Ball}
@@ -10,7 +10,7 @@ package ganymede.jupyterlab.client.model;
  * ##########################################################################
  * Ganymede
  * %%
- * Copyright (C) 2023 Allen D. Ball
+ * Copyright (C) 2023, 2024 Allen D. Ball
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
