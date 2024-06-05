@@ -417,6 +417,20 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <configuration>
+            <rules>
+              <enforceBytecodeVersion>
+                <maxJdkVersion>${maven.compiler.release}</maxJdkVersion>
+                <excludes>
+                  <exclude>org.freemarker:freemarker</exclude>
+                </excludes>
+              </enforceBytecodeVersion>
+            </rules>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <configuration>
             <additionalJOptions>
