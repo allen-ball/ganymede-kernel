@@ -125,9 +125,10 @@
     <resolverVersion>1.9.20</resolverVersion>
     <plexusXmlVersion>4.0.4</plexusXmlVersion>
 
-    <spark.version>3.3.4</spark.version>
+    <spark.version>3.4.3</spark.version>
     <scala.binary.version>2.12</scala.binary.version>
     <scala.version>${scala.binary.version}.19</scala.version>
+    <jackson-bom.version>2.14.3</jackson-bom.version>
     <jackson.version>${jackson-bom.version}</jackson.version>
 
     <commonmark.version>0.22.0</commonmark.version>
