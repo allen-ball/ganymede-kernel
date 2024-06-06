@@ -123,6 +123,7 @@
 
     <maven.version>3.9.7</maven.version>
     <resolverVersion>1.9.20</resolverVersion>
+    <plexusXmlVersion>4.0.4</plexusXmlVersion>
 
     <spark.version>3.3.4</spark.version>
     <scala.binary.version>2.12</scala.binary.version>
@@ -238,6 +239,11 @@
         <groupId>org.apache.velocity</groupId>
         <artifactId>velocity-engine-scripting</artifactId>
         <version>2.3</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-xml</artifactId>
+        <version>${plexusXmlVersion}</version>
       </dependency>
       <dependency>
         <groupId>org.commonmark</groupId>
@@ -469,6 +475,14 @@
                 <artifact>org.codehaus.groovy:groovy-*</artifact>
                 <excludes>
                   <exclude>META-INF/groovy-release-info.properties</exclude>
+                </excludes>
+              </filter>
+              <filter>
+                <artifact>org.codehaus.plexus:plexus-*</artifact>
+                <excludes>
+                  <exclude>licenses/extreme.indiana.edu.license.TXT</exclude>
+                  <exclude>licenses/javolution.license.TXT</exclude>
+                  <exclude>licenses/thoughtworks.TXT</exclude>
                 </excludes>
               </filter>
               <filter>
