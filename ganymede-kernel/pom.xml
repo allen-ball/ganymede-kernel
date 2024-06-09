@@ -40,6 +40,11 @@
   <dependencies verbose="true">
     <dependency>
       <groupId>dev.hcf.ganymede</groupId>
+      <artifactId>ganymede-client</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>dev.hcf.ganymede</groupId>
       <artifactId>ganymede-notebook</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -261,30 +266,6 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>ganymede-rest-protocol.yml</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>unpack</goal>
-            </goals>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>dev.hcf.ganymede</groupId>
-                  <artifactId>ganymede-client</artifactId>
-                  <version>${project.version}</version>
-                  <type>jar</type>
-                </artifactItem>
-              </artifactItems>
-              <includes>ganymede-rest-protocol.yml</includes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
         <groupId>org.openapitools</groupId>
 	<artifactId>openapi-generator-maven-plugin</artifactId>
         <executions>
@@ -294,7 +275,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <inputSpec>${project.build.directory}/dependency/ganymede-rest-protocol.yml</inputSpec>
+              <inputSpec>jar:file://${dev.hcf.ganymede:ganymede-client:jar}!/ganymede-rest-protocol.yml</inputSpec>
               <generatorName>spring</generatorName>
               <library>spring-boot</library>
               <importMappings>JsonNode=com.fasterxml.jackson.databind.JsonNode,UUID=java.util.UUID</importMappings>
