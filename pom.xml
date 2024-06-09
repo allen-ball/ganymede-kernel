@@ -133,6 +133,7 @@
     <log4j2.version>2.19.0</log4j2.version>
 
     <commonmark.version>0.22.0</commonmark.version>
+    <groovy4.version>4.0.21</groovy4.version>
     <jeromq.version>0.6.0</jeromq.version>
     <tablesaw.version>0.43.1</tablesaw.version>
   </properties>
@@ -197,6 +198,11 @@
             <artifactId>javax.annotation-api</artifactId>
           </exclusion>
         </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.groovy</groupId>
+        <artifactId>groovy-jsr223</artifactId>
+        <version>${groovy4.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.spark</groupId>
@@ -467,16 +473,16 @@
           <configuration>
             <filters>
               <filter>
+                <artifact>*.groovy:groovy-*</artifact>
+                <excludes>
+                  <exclude>META-INF/groovy-release-info.properties</exclude>
+                </excludes>
+              </filter>
+              <filter>
                 <artifact>org.apache.velocity:velocity-engine-core</artifact>
                 <excludes>
                   <exclude>META-INF/maven/commons-io/**</exclude>
                   <exclude>org/apache/velocity/shaded/**</exclude>
-                </excludes>
-              </filter>
-              <filter>
-                <artifact>org.codehaus.groovy:groovy-*</artifact>
-                <excludes>
-                  <exclude>META-INF/groovy-release-info.properties</exclude>
                 </excludes>
               </filter>
               <filter>

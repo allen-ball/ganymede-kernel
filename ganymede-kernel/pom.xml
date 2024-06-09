@@ -92,6 +92,10 @@
       <artifactId>jakarta.xml.bind-api</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.apache.groovy</groupId>
+      <artifactId>groovy-jsr223</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-iostreams</artifactId>
     </dependency>
@@ -138,10 +142,6 @@
     <dependency>
       <groupId>org.apache.velocity</groupId>
       <artifactId>velocity-engine-scripting</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-jsr223</artifactId>
     </dependency>
     <dependency>
       <groupId>org.commonmark</groupId>
@@ -252,6 +252,12 @@
             <link><url>https://allen-ball.github.io/ganymede/</url></link>
             <link><url>https://docs.oracle.com/en/java/javase/${java.specification.version}/docs/api/</url></link>
           </links>
+          <offlinelinks>
+            <offlinelink>
+              <artifact>org.apache.groovy:*</artifact>
+              <url>https://javadoc.io/doc/{g}/groovy-all/{v}/</url>
+            </offlinelink>
+          </offlinelinks>
         </configuration>
       </plugin>
       <plugin>
