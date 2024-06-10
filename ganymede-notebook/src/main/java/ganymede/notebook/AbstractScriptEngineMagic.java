@@ -3,7 +3,7 @@ package ganymede.notebook;
  * ##########################################################################
  * Ganymede
  * %%
- * Copyright (C) 2021, 2022 Allen D. Ball
+ * Copyright (C) 2021 - 2024 Allen D. Ball
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +25,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.extern.log4j.Log4j2;
@@ -158,7 +159,17 @@ public abstract class AbstractScriptEngineMagic extends AbstractMagic implements
         if (engine != null) {
             try {
                 if (! code.isBlank()) {
-                    render(engine.eval(code, context.context));
+                    try {
+                        render(engine.eval(code, context.context));
+                    } catch (ScriptException exception) {
+                        var cause = exception.getCause();
+
+                        while (cause instanceof ScriptException) {
+                            cause = cause.getCause();
+                        }
+
+                        throw (cause != null) ? cause : exception;
+                    }
                 } else {
                     show();
                 }
