@@ -1,6 +1,6 @@
 /**
  * See
- * {@link.uri https://github.com/jupyterlab/jupyterlab_server/blob/v2.27.2/jupyterlab_server/rest-api.yml target=newtab https://github.com/jupyterlab/jupyterlab_server/blob/v2.27.2/jupyterlab_server/rest-api.yml}.
+ * {@link.uri https://github.com/jupyterlab/jupyterlab_server/blob/v2.27.3/jupyterlab_server/rest-api.yml target=newtab https://github.com/jupyterlab/jupyterlab_server/blob/v2.27.3/jupyterlab_server/rest-api.yml}.
  *
  * @author {@link.uri mailto:ball@hcf.dev Allen D. Ball}
  */
