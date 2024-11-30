@@ -127,11 +127,11 @@
 
     <spark.version>3.3.4</spark.version>
     <scala.binary.version>2.12</scala.binary.version>
-    <scala.version>${scala.binary.version}.19</scala.version>
+    <scala.version>${scala.binary.version}.20</scala.version>
     <jackson.version>${jackson-bom.version}</jackson.version>
 
     <commonmark.version>0.22.0</commonmark.version>
-    <groovy4.version>4.0.22</groovy4.version>
+    <groovy4.version>4.0.24</groovy4.version>
     <jeromq.version>0.6.0</jeromq.version>
     <tablesaw.version>0.43.1</tablesaw.version>
   </properties>
